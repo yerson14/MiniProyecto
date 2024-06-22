@@ -26,10 +26,25 @@ void main(List<String> args) {
       crud=int.parse(stdin.readLineSync()!);
       switch (crud) {
         case 1:
-          
+          print("Estos son los aprendices");
+          print(estudiantes);
+          print("Digite el nombre del estudiante que quiere editar");
+          nomEstudiantes=stdin.readLineSync()!;
+          for(var i = 0; i < estudiantes.length; i++){
+            if (nomEstudiantes==estudiantes[i]) {
+              print("Digite el cambio que desea realizar");
+              nomEstudiantes=stdin.readLineSync()!;
+              estudiantes[i]=nomEstudiantes;
+              print(estudiantes);
+              print("Estudiante editado exitosamente");
+            }
+            else{
+              print("No se encontro aprendiz con ese nombre");
+            }
+          }
+
           break;
         case 2:
-
         print("Estos son los estudiantes que hay");
         print(estudiantes);
         print("Digite el nombre del estudiante que quiere eliminar");
@@ -44,10 +59,11 @@ void main(List<String> args) {
             print("No se encontro aprendiz con ese nombre");
           }
         }
-
           break;
         case 3:
-          
+          print("Digite el nombre del estudiante que quiere agregar");
+          nomEstudiantes=stdin.readLineSync()!;
+          estudiantes.add(nomEstudiantes);
           break;
         case 4:
           print(estudiantes);
