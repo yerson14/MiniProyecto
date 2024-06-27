@@ -10,7 +10,6 @@ void main(List<String> args) {
   String? nomEstudiantes, nomRemove, nomTemas, nomremoveTemas;
 
   print('-' * 80);
-  print('BIENVENID@');
   print("Ponga 1 si quiere generar la información o responda 2 si quiere la información predefinida");
   predefinida = int.parse(stdin.readLineSync()!);
   print('-' * 80);
